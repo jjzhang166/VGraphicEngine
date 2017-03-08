@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header\VGraphicEngine">
+      <UniqueIdentifier>{872b53a1-ef10-4fbd-a17b-e799b356fd08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\VGraphicEngine\fw">
+      <UniqueIdentifier>{ef11dcf6-9444-4f90-a7af-9ef5611c393c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\VGraphicEngine\sl">
+      <UniqueIdentifier>{f88987db-f949-4481-8c39-1389060c95ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\VGraphicEngine\vr">
+      <UniqueIdentifier>{71721e8c-7675-4550-a3a3-9ada83d99571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Media">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Sample">
+      <UniqueIdentifier>{0f8f50d2-a324-449b-b91e-7eb9979bef24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphicEngine">
+      <UniqueIdentifier>{3571245a-54ce-4e9f-9c5d-cb7faaf5f4f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphicEngine\fw">
+      <UniqueIdentifier>{5658530c-4e7b-4fd1-8aa0-915f1acf5012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphicEngine\vr">
+      <UniqueIdentifier>{a14fe0a0-0c0c-432a-8275-293e35ff063e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphicEngine\sl">
+      <UniqueIdentifier>{b05fe4d1-fc1c-453b-a559-f10d3e8e064d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\glm">
+      <UniqueIdentifier>{37cf2329-9326-418b-b01f-5e054fd3a810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\VGraphicEngine\core">
+      <UniqueIdentifier>{17169ea1-8e31-4865-bc1e-28b4c9ba48a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphicEngine\vg">
+      <UniqueIdentifier>{74a4e9fe-b806-448a-be70-dde0b72d1eb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\VGraphicEngine\core\alloc">
+      <UniqueIdentifier>{2bdcae50-4260-43b9-8906-ce55b49bb4e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Samples">
+      <UniqueIdentifier>{390b4e07-df67-466b-9c5a-e15e1518763d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\glm\CMakeLists.txt">
+      <Filter>Header\glm</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\glm\common.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\exponential.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\ext.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\fwd.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\geometric.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\glm.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\integer.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat2x2.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat2x3.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat2x4.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat3x2.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat3x3.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat3x4.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat4x2.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat4x3.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\mat4x4.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\matrix.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\packing.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\trigonometric.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\vec2.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\vec3.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\vec4.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\glm\vector_relational.hpp">
+      <Filter>Header\glm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VGraphicEngine.h">
+      <Filter>Header\VGraphicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Config.h">
+      <Filter>Header\VGraphicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgTypes.h">
+      <Filter>Header\VGraphicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgCheck.h">
+      <Filter>Header\VGraphicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgAssert.h">
+      <Filter>Header\VGraphicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgMath.h">
+      <Filter>Header\VGraphicEngine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StackAllocator.h">
+      <Filter>Header\VGraphicEngine\core\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DoubleBufferedAllocator.h">
+      <Filter>Header\VGraphicEngine\core\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TFreeList.h">
+      <Filter>Header\VGraphicEngine\core\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AllocateAligned.h">
+      <Filter>Header\VGraphicEngine\core\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="samples\Samples.h">
+      <Filter>Header\Samples</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\vgAssert.cpp">
+      <Filter>Source\VGraphicEngine\vg</Filter>
+    </ClCompile>
+    <ClCompile Include="samples\test\test.cpp">
+      <Filter>Sample</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
