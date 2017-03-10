@@ -19,33 +19,33 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B4B53CF1-2B1C-4B13-916A-AB6E457D42B1}</ProjectGuid>
+    <ProjectGuid>{FDC3E45F-D486-44F4-8280-9D0325979FF1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>VGraphicEngine</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,9 +71,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)\bin\</OutDir>
-    <IntDir>$(SolutioinDir)\temp\</IntDir>
+    <IntDir>$(SolutionDir)\temp\VGraphicEngine\</IntDir>
+    <TargetName>VGraphic</TargetName>
+    <IncludePath>.\dep\direct9c\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\dep\direct9c\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -90,13 +92,15 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;VGRAPHICENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)\bin\VGraphic.dll</OutputFile>
+      <ImportLibrary>$(SolutionDir)lib\$(Targetname).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -105,11 +109,11 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;VGRAPHICENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -121,11 +125,11 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VGRAPHICENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -139,58 +143,72 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;VGRAPHICENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="include\glm\CMakeLists.txt" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AllocateAligned.h" />
+    <ClInclude Include="include\Blit.h" />
     <ClInclude Include="include\Config.h" />
+    <ClInclude Include="include\dimension2d.h" />
     <ClInclude Include="include\DoubleBufferedAllocator.h" />
-    <ClInclude Include="include\glm\common.hpp" />
-    <ClInclude Include="include\glm\exponential.hpp" />
-    <ClInclude Include="include\glm\ext.hpp" />
-    <ClInclude Include="include\glm\fwd.hpp" />
-    <ClInclude Include="include\glm\geometric.hpp" />
-    <ClInclude Include="include\glm\glm.hpp" />
-    <ClInclude Include="include\glm\integer.hpp" />
-    <ClInclude Include="include\glm\mat2x2.hpp" />
-    <ClInclude Include="include\glm\mat2x3.hpp" />
-    <ClInclude Include="include\glm\mat2x4.hpp" />
-    <ClInclude Include="include\glm\mat3x2.hpp" />
-    <ClInclude Include="include\glm\mat3x3.hpp" />
-    <ClInclude Include="include\glm\mat3x4.hpp" />
-    <ClInclude Include="include\glm\mat4x2.hpp" />
-    <ClInclude Include="include\glm\mat4x3.hpp" />
-    <ClInclude Include="include\glm\mat4x4.hpp" />
-    <ClInclude Include="include\glm\matrix.hpp" />
-    <ClInclude Include="include\glm\packing.hpp" />
-    <ClInclude Include="include\glm\trigonometric.hpp" />
-    <ClInclude Include="include\glm\vec2.hpp" />
-    <ClInclude Include="include\glm\vec3.hpp" />
-    <ClInclude Include="include\glm\vec4.hpp" />
-    <ClInclude Include="include\glm\vector_relational.hpp" />
+    <ClInclude Include="include\EDeviceTypes.h" />
+    <ClInclude Include="include\EDriverTypes.h" />
+    <ClInclude Include="include\FWCreationParameters.h" />
+    <ClInclude Include="include\FWDevice.h" />
+    <ClInclude Include="include\ICursorControl.h" />
+    <ClInclude Include="include\IEventReceiver.h" />
+    <ClInclude Include="include\IException.h" />
+    <ClInclude Include="include\IReferenceCounted.h" />
+    <ClInclude Include="include\IStringException.h" />
+    <ClInclude Include="include\ITimer.h" />
+    <ClInclude Include="include\IVideoDriver.h" />
+    <ClInclude Include="include\Keycodes.h" />
+    <ClInclude Include="include\position2d.h" />
+    <ClInclude Include="include\rect.h" />
+    <ClInclude Include="include\SColor.h" />
+    <ClInclude Include="include\SKeyMap.h" />
     <ClInclude Include="include\StackAllocator.h" />
+    <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\TextureHelper.h" />
     <ClInclude Include="include\TFreeList.h" />
+    <ClInclude Include="include\vector2d.h" />
     <ClInclude Include="include\vgAssert.h" />
     <ClInclude Include="include\vgCheck.h" />
     <ClInclude Include="include\vgMath.h" />
     <ClInclude Include="include\VGraphicEngine.h" />
+    <ClInclude Include="include\vgToolFunctions.h" />
     <ClInclude Include="include\vgTypes.h" />
-    <ClInclude Include="samples\Samples.h" />
+    <ClInclude Include="include\VRManager.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="source\CColorConverter.h" />
+    <ClInclude Include="source\CHalfSoftWareDriver.h" />
+    <ClInclude Include="source\CNullDriver.h" />
+    <ClInclude Include="source\CTimer.h" />
+    <ClInclude Include="source\FWMidDevice.h" />
+    <ClInclude Include="source\FWWin32Device.h" />
+    <ClInclude Include="source\os.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="samples\test\test.cpp" />
+    <ClCompile Include="source\CColorConverter.cpp" />
+    <ClCompile Include="source\CHalfSoftWareDriver.cpp" />
+    <ClCompile Include="source\CNullDriver.cpp" />
+    <ClCompile Include="source\FWMidDevice.cpp" />
+    <ClCompile Include="source\FWWin32Device.cpp" />
+    <ClCompile Include="source\os.cpp" />
+    <ClCompile Include="source\Texture.cpp" />
     <ClCompile Include="source\vgAssert.cpp" />
+    <ClCompile Include="source\VGraphicEngine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

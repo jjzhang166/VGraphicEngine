@@ -1,8 +1,17 @@
 #ifndef __VGRAPHICENGINE_CONFIG_H_INCLUDE__
 #define __VGRAPHICENGINE_CONFIG_H_INCLUDE__
+
 #include <iostream>
 
-#define VG_SDK_VERSION_STRING  "VGraphicEngine version 0.0.0"
+#ifndef _DEBUG
+#define _DEBUG
+#endif
+
+#define VG_WINDOWS_API
+
+#define MAX_COLORS_PALETTE  256
+
+#define VG_SDK_VERSION_STRING  "0.0.0"
 
 //! WIN32 for Windows32
 //! WIN64 for Windows64
@@ -38,6 +47,27 @@ EAL_MEMALLOC = 5,//ƒ⁄¥Ê∑÷≈‰–Õ
 #else
 
 #endif
+
+#define VGRAPHIC_EXPORTS
+
+#define _VG_COMPILE_WITH_HALFSOFTWARE_
+
+#ifndef _VG_STATIC_LIB_
+#ifdef VGRAPHIC_EXPORTS
+#define VGRAPHIC_API __declspec(dllexport)
+#else
+#define VGRAPHIC_API __declspec(dllimport)
+#endif // IRRLICHT_EXPORT
+#else
+#define VGRAPHIC_API
+#endif // _IRR_STATIC_LIB_
+
+// Declare the calling convention.
+#if defined(_STDCALL_SUPPORTED)
+#define IRRCALLCONV __stdcall
+#else
+#define VGCALLCONV __cdecl
+#endif // STDCALL_SUPPORTED
 
 
 #endif//! __VGRAPHICENGINE_CONFIG_H_INCLUDE__

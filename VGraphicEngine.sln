@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VGraphicEngine", "VGraphicEngine.vcxproj", "{B4B53CF1-2B1C-4B13-916A-AB6E457D42B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VGraphicEngine", "VGraphicEngine.vcxproj", "{FDC3E45F-D486-44F4-8280-9D0325979FF1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeviceDriverTest", "samples\DeviceDriverTest\DeviceDriverTest.vcxproj", "{80BD80A5-586E-4785-B869-DD2DA2B3429F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VGraphicEngineDebug", "VGraphicEngineDebug.vcxproj", "{B4B53CF1-2B1C-4B13-916A-AB6E457D42B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,22 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Debug|x64.ActiveCfg = Debug|x64
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Debug|x64.Build.0 = Debug|x64
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Debug|x86.ActiveCfg = Debug|Win32
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Debug|x86.Build.0 = Debug|Win32
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Release|x64.ActiveCfg = Release|x64
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Release|x64.Build.0 = Release|x64
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Release|x86.ActiveCfg = Release|Win32
+		{FDC3E45F-D486-44F4-8280-9D0325979FF1}.Release|x86.Build.0 = Release|Win32
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Debug|x64.ActiveCfg = Debug|x64
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Debug|x64.Build.0 = Debug|x64
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Debug|x86.ActiveCfg = Debug|Win32
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Debug|x86.Build.0 = Debug|Win32
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Release|x64.ActiveCfg = Release|x64
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Release|x64.Build.0 = Release|x64
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Release|x86.ActiveCfg = Release|Win32
+		{80BD80A5-586E-4785-B869-DD2DA2B3429F}.Release|x86.Build.0 = Release|Win32
 		{B4B53CF1-2B1C-4B13-916A-AB6E457D42B1}.Debug|x64.ActiveCfg = Debug|x64
 		{B4B53CF1-2B1C-4B13-916A-AB6E457D42B1}.Debug|x64.Build.0 = Debug|x64
 		{B4B53CF1-2B1C-4B13-916A-AB6E457D42B1}.Debug|x86.ActiveCfg = Debug|Win32

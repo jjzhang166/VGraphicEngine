@@ -3,15 +3,17 @@
 
 #ifndef INCLUDE_VGENGINE
 #define INCLUDE_VGENGINE
-#include <VGraphicEngine.h>
+#include "VGraphicEngine.h"
 
 #endif
 
-#define CURRENT_SAMPLEID 0
+#define CURRENT_SAMPLEID 1
 
 #if(CURRENT_SAMPLEID==0)
 #define __SAMPLE_TEST_0__
-#else
+#elif((CURRENT_SAMPLEID==1))
+#define __SAMPLE_TEST_1__
+
 
 #endif
 

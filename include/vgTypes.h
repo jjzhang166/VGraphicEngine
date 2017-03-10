@@ -1,5 +1,6 @@
 #ifndef __CJ_TYPE_H__
 #define __CJ_TYPE_H__
+
 #include "Config.h"
 namespace vg
 {

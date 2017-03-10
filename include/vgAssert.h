@@ -10,7 +10,20 @@
 //不同平台有不同实现
 #define DEBUG_BREAK {_asm {int 3}}
 //检查是否出错,如果出错则报告错误,并返回true
-extern bool CustomAssertPFailure(bool exp, char* description, char* file, int line, int level);
+inline bool CustomAssertPFailure(bool exp, char* description, char* file, int line, int level)
+{
+	//断言正确
+	if (exp)
+		return false;
+	//断言错误
+	std::cerr << "ASSERT:\n\tleve:" << level << "\n\tfile:" << file << "\n\tline:" << line
+		<< "\n\tdescription:" << description
+		//<<"\n\texp:"<< exp  
+		<< std::endl;
+	if (level >= ASSERT_LEVEL)
+		return true;
+	return false;
+}
 /**
 * ASSERT_LEVEL:断言等级,如果需要判断等级小于当前调试等级,不中断,但是会将错误报告.
 \param expr 断言内容

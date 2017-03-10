@@ -300,7 +300,6 @@ void transform_homogenize(const transform_t *ts, vector_t *y, const vector_t *x)
 	y->w = 1.0f;
 }
 
-
 //=====================================================================
 // 几何计算：顶点、扫描线、边缘、矩形、步长计算
 //=====================================================================
@@ -951,7 +950,7 @@ int main(void)
 
 		draw_box(&device, alpha);
 		screen_update();
-		Sleep(1);
+	//	Sleep(1);
 	}
 	return 0;
 }

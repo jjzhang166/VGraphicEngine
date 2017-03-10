@@ -14,7 +14,7 @@ namespace vg
 		cv::FreeAligned(buffer);
 		aligned allocator.alignment must be 2^n,normally 4 or 16.
 		*/
-		void* AllocateAligned(u32 sizeBytes, s32 alignment)
+		inline void* AllocateAligned(u32 sizeBytes, s32 alignment)
 		{
 			{
 				AssertP(0 == (alignment&(alignment - 1)), "AllocateAligned 0==(alignment&(alignment-1))", EAL_MEMALLOC);
@@ -29,7 +29,7 @@ namespace vg
 				return alignedData;
 			}
 		}
-		void FreeAligned(void* p)
+		inline  void FreeAligned(void* p)
 		{
 			{
 				if (p)

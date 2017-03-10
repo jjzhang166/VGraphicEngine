@@ -6,11 +6,15 @@
 
 #ifndef __VGRAPHICENGINE_H_INCLUDE_H__
 #define __VGRAPHICENGINE_H_INCLUDE_H__
-#include "Config.h"
+
 //vg
+#include "Config.h"
 #include "vgAssert.h"
 #include "vgCheck.h"
 #include "vgTypes.h"
+#include "IReferenceCounted.h"
+
+
 
 //vg::core
 #include "vgMath.h"
@@ -19,11 +23,35 @@
 #include "AllocateAligned.h"
 #include "TFreeList.h"
 
+#include "vector2d.h"
+#include "position2d.h"
+#include "dimension2d.h"
+#include "rect.h"
+
+
 //vg::fw
+#include "FWDevice.h"
+#include "ICursorControl.h"
+#include "EDeviceTypes.h"
+#include "FWCreationParameters.h"
+#include "IEventReceiver.h"
+#include "Keycodes.h"
+#include "SKeyMap.h"
+#include "EDriverTypes.h"
 
 //vg::vr
+#include "Blit.h"
+#include "Texture.h"
+#include "SColor.h"
+#include "TextureHelper.h"
+#include "VRManager.h"
 
 //vg::sl
+
+//vg::io
+#include "IException.h"
+#include "IStringException.h"
+
 
 
 namespace vg
@@ -43,6 +71,31 @@ namespace vg
 	namespace sl
 	{
 	}//! end namespace sl
+
+	extern "C" VGRAPHIC_API fw::FWDevice* VGCALLCONV createDevice(
+		fw::E_DRIVER_TYPE deviceType = fw::EDT_HALFSOFTWARE,
+		// parantheses are necessary for some compilers
+		const core::dimension2d<u32>& windowSize = (core::dimension2d<u32>(640, 480)),
+		u32 bits = 24,
+		bool fullscreen = false,
+		bool stencilbuffer = false,
+		bool vsync = false,
+		bool resized=  false,
+		fw::IEventReceiver* receiver = 0);
+
+	extern "C" VGRAPHIC_API fw::FWDevice* VGCALLCONV createDeviceEx(
+		const fw::FWCreationParameters& parameters);
+
+	extern "C"  fw::FWDevice*  createDeviceDebug(
+		fw::E_DRIVER_TYPE deviceType = fw::EDT_HALFSOFTWARE,
+		// parantheses are necessary for some compilers
+		const core::dimension2d<u32>& windowSize = (core::dimension2d<u32>(640, 480)),
+		u32 bits = 24,
+		bool fullscreen = false,
+		bool stencilbuffer = false,
+		bool vsync = false,
+		bool resized = false,
+		fw::IEventReceiver* receiver = 0);
 
 }//! end namespace vg
 

@@ -1,6 +1,10 @@
-/**!
-*声明:core命名控件内的结构与算法包括math大部分参考了Irrlicht引擎的实现
-*同时借鉴了<<windows游戏编程大师技巧>>以及<<3D游戏编程...>>的实现.*/
+
+//声明:core命名控件内的结构与算法包括math大部分参考了Irrlicht引擎的实现
+//同时借鉴了<<windows游戏编程大师技巧>>以及<<3D游戏编程...>>的实现.
+// Copyright (C) 2002-2012 Nikolaus Gebhardt
+// This file is part of the "Irrlicht Engine".
+// For conditions of distribution and use, see copyright notice in irrlicht.h
+
 #ifndef __VGRAPHICENGINE_MATH_H__
 #define __VGRAPHICENGINE_MATH_H__
 

@@ -1,176 +1,206 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Header">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Header\VGraphicEngine">
-      <UniqueIdentifier>{872b53a1-ef10-4fbd-a17b-e799b356fd08}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\VGraphicEngine\fw">
-      <UniqueIdentifier>{ef11dcf6-9444-4f90-a7af-9ef5611c393c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\VGraphicEngine\sl">
-      <UniqueIdentifier>{f88987db-f949-4481-8c39-1389060c95ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\VGraphicEngine\vr">
-      <UniqueIdentifier>{71721e8c-7675-4550-a3a3-9ada83d99571}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Media">
+    <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Sample">
-      <UniqueIdentifier>{0f8f50d2-a324-449b-b91e-7eb9979bef24}</UniqueIdentifier>
+    <Filter Include="Header">
+      <UniqueIdentifier>{a121bc36-0760-4ffe-b167-5cdc7f998c1d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\VGraphicEngine">
-      <UniqueIdentifier>{3571245a-54ce-4e9f-9c5d-cb7faaf5f4f5}</UniqueIdentifier>
+    <Filter Include="Source">
+      <UniqueIdentifier>{7073d8fa-21c6-4a62-b1aa-180f656feac7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\VGraphicEngine\fw">
-      <UniqueIdentifier>{5658530c-4e7b-4fd1-8aa0-915f1acf5012}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic">
+      <UniqueIdentifier>{a1a3383e-1265-41ad-9d70-0c55491f5e7e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\VGraphicEngine\vr">
-      <UniqueIdentifier>{a14fe0a0-0c0c-432a-8275-293e35ff063e}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic\core">
+      <UniqueIdentifier>{c9062d4d-3f84-44c6-833e-770ff89a7bbe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\VGraphicEngine\sl">
-      <UniqueIdentifier>{b05fe4d1-fc1c-453b-a559-f10d3e8e064d}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic\core\alloc">
+      <UniqueIdentifier>{722e4085-6903-4bd1-a387-47e9346b8d82}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header\glm">
-      <UniqueIdentifier>{37cf2329-9326-418b-b01f-5e054fd3a810}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic\fw">
+      <UniqueIdentifier>{a7d78ee5-dc84-4616-8156-d87d781a0168}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header\VGraphicEngine\core">
-      <UniqueIdentifier>{17169ea1-8e31-4865-bc1e-28b4c9ba48a5}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic\io">
+      <UniqueIdentifier>{c88fa1bb-fbee-4e80-a297-6f22bf7a68d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\VGraphicEngine\vg">
-      <UniqueIdentifier>{74a4e9fe-b806-448a-be70-dde0b72d1eb1}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic\sl">
+      <UniqueIdentifier>{51f637a7-4db6-4e2a-b3d4-b2b287cb38c0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header\VGraphicEngine\core\alloc">
-      <UniqueIdentifier>{2bdcae50-4260-43b9-8906-ce55b49bb4e9}</UniqueIdentifier>
+    <Filter Include="Header\VGraphic\vr">
+      <UniqueIdentifier>{9e4fcfe8-ab78-4e45-82a1-876a6cd91cf4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header\Samples">
-      <UniqueIdentifier>{390b4e07-df67-466b-9c5a-e15e1518763d}</UniqueIdentifier>
+    <Filter Include="Source\VGraphic">
+      <UniqueIdentifier>{f21f07af-2368-480f-a18b-ccfb9fbf8b55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphic\vr">
+      <UniqueIdentifier>{71bf2b0a-009c-4789-962d-279206b16450}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphic\io">
+      <UniqueIdentifier>{8064efbc-7f61-4f2f-b288-73f1c3084d10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphic\fw">
+      <UniqueIdentifier>{9df2a6c4-aba0-41ae-b127-ee19d311ab41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VGraphic\core">
+      <UniqueIdentifier>{37bb312a-d4b7-40cb-a8f8-24408d24c1ae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="include\glm\CMakeLists.txt">
-      <Filter>Header\glm</Filter>
-    </Text>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\glm\common.hpp">
-      <Filter>Header\glm</Filter>
+    <ClInclude Include="include\dimension2d.h">
+      <Filter>Header\VGraphic\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\glm\exponential.hpp">
-      <Filter>Header\glm</Filter>
+    <ClInclude Include="include\position2d.h">
+      <Filter>Header\VGraphic\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\glm\ext.hpp">
-      <Filter>Header\glm</Filter>
+    <ClInclude Include="include\rect.h">
+      <Filter>Header\VGraphic\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\glm\fwd.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\geometric.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\glm.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\integer.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat2x2.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat2x3.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat2x4.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat3x2.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat3x3.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat3x4.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat4x2.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat4x3.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\mat4x4.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\matrix.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\packing.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\trigonometric.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\vec2.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\vec3.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\vec4.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\glm\vector_relational.hpp">
-      <Filter>Header\glm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\VGraphicEngine.h">
-      <Filter>Header\VGraphicEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Config.h">
-      <Filter>Header\VGraphicEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="include\vgTypes.h">
-      <Filter>Header\VGraphicEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="include\vgCheck.h">
-      <Filter>Header\VGraphicEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="include\vgAssert.h">
-      <Filter>Header\VGraphicEngine</Filter>
+    <ClInclude Include="include\vector2d.h">
+      <Filter>Header\VGraphic\core</Filter>
     </ClInclude>
     <ClInclude Include="include\vgMath.h">
-      <Filter>Header\VGraphicEngine\core</Filter>
+      <Filter>Header\VGraphic\core</Filter>
     </ClInclude>
-    <ClInclude Include="include\StackAllocator.h">
-      <Filter>Header\VGraphicEngine\core\alloc</Filter>
-    </ClInclude>
-    <ClInclude Include="include\DoubleBufferedAllocator.h">
-      <Filter>Header\VGraphicEngine\core\alloc</Filter>
-    </ClInclude>
-    <ClInclude Include="include\TFreeList.h">
-      <Filter>Header\VGraphicEngine\core\alloc</Filter>
+    <ClInclude Include="include\vgToolFunctions.h">
+      <Filter>Header\VGraphic\core</Filter>
     </ClInclude>
     <ClInclude Include="include\AllocateAligned.h">
-      <Filter>Header\VGraphicEngine\core\alloc</Filter>
+      <Filter>Header\VGraphic\core\alloc</Filter>
     </ClInclude>
-    <ClInclude Include="samples\Samples.h">
-      <Filter>Header\Samples</Filter>
+    <ClInclude Include="include\DoubleBufferedAllocator.h">
+      <Filter>Header\VGraphic\core\alloc</Filter>
     </ClInclude>
+    <ClInclude Include="include\TFreeList.h">
+      <Filter>Header\VGraphic\core\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StackAllocator.h">
+      <Filter>Header\VGraphic\core\alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EDeviceTypes.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EDriverTypes.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FWCreationParameters.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FWDevice.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ICursorControl.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ITimer.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IVideoDriver.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Keycodes.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SKeyMap.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IException.h">
+      <Filter>Header\VGraphic\io</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IStringException.h">
+      <Filter>Header\VGraphic\io</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Blit.h">
+      <Filter>Header\VGraphic\vr</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SColor.h">
+      <Filter>Header\VGraphic\vr</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Texture.h">
+      <Filter>Header\VGraphic\vr</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TextureHelper.h">
+      <Filter>Header\VGraphic\vr</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VRManager.h">
+      <Filter>Header\VGraphic\vr</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgTypes.h">
+      <Filter>Header\VGraphic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Config.h">
+      <Filter>Header\VGraphic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IReferenceCounted.h">
+      <Filter>Header\VGraphic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgAssert.h">
+      <Filter>Header\VGraphic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vgCheck.h">
+      <Filter>Header\VGraphic</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VGraphicEngine.h">
+      <Filter>Header\VGraphic</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CHalfSoftWareDriver.h">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CNullDriver.h">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CTimer.h">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\FWMidDevice.h">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\FWWin32Device.h">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\os.h">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CColorConverter.h">
+      <Filter>Source\VGraphic\vr</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IEventReceiver.h">
+      <Filter>Header\VGraphic\fw</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\vgAssert.cpp">
-      <Filter>Source\VGraphicEngine\vg</Filter>
+    <ClCompile Include="source\CHalfSoftWareDriver.cpp">
+      <Filter>Source\VGraphic\fw</Filter>
     </ClCompile>
-    <ClCompile Include="samples\test\test.cpp">
-      <Filter>Sample</Filter>
+    <ClCompile Include="source\CNullDriver.cpp">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FWMidDevice.cpp">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="source\FWWin32Device.cpp">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="source\os.cpp">
+      <Filter>Source\VGraphic\fw</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CColorConverter.cpp">
+      <Filter>Source\VGraphic\vr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Texture.cpp">
+      <Filter>Source\VGraphic\vr</Filter>
+    </ClCompile>
+    <ClCompile Include="source\vgAssert.cpp">
+      <Filter>Source\VGraphic</Filter>
+    </ClCompile>
+    <ClCompile Include="source\VGraphicEngine.cpp">
+      <Filter>Source\VGraphic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
