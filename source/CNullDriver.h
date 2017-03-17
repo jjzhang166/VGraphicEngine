@@ -37,6 +37,8 @@ namespace vg
 			*/
 			virtual void* getBackSurface() override;
 
+			virtual void* getBackBuffer() override;
+
 			//*********************part two****************
 			//! Get the size of the current render target
 			/** This method will return the screen size if the driver
@@ -45,6 +47,9 @@ namespace vg
 			\return Size of render target or screen/window */
 			virtual const core::dimension2d<u32>& getCurrentRenderTargetSize() const override;
 
+
+			// Get the default surface's lpitch
+			virtual const int getCurrentRenderTargetLpitch() const override;
 
 			//! Remove all hardware buffers
 			virtual void removeAllHardwareBuffers() override;

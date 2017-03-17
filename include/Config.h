@@ -13,6 +13,11 @@
 
 #define VG_SDK_VERSION_STRING  "0.0.0"
 
+
+
+
+//#define _VG_SOLARIS_PLATFORM
+
 //! WIN32 for Windows32
 //! WIN64 for Windows64
 // The windows platform and API support SDL and WINDOW device

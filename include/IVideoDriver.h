@@ -65,6 +65,9 @@ namespace vg
 			*/
 			virtual void* getBackSurface() = 0;
 
+			//! Get the back buffer of the surfaces
+			virtual void* getBackBuffer() = 0;
+
 			//***************************second part*****************
 			//! Get the size of the current render target
 			/** This method will return the screen size if the driver
@@ -72,6 +75,9 @@ namespace vg
 			target is the screen.
 			\return Size of render target or screen/window */
 			virtual const core::dimension2d<u32>& getCurrentRenderTargetSize() const = 0;
+			
+			// Get the default surface's lpitch
+			virtual const int getCurrentRenderTargetLpitch() const = 0;
 
 			//! Remove all hardware buffers
 			virtual void removeAllHardwareBuffers() = 0;

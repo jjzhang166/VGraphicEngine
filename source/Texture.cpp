@@ -9,25 +9,38 @@ namespace vg
 {
 	namespace vr
 	{
-
 		//! Constructor of empty image
-		Texture::Texture(ECOLOR_FORMAT format, const core::dimension2d<u32>& size)
-			:Data(0), Size(size), Format(format), DeleteMemory(true)
+		Texture::Texture(ECOLOR_FORMAT format, const core::dimension2d<u32>& size, bool DefaultTexture)
+			:Data(0), Size(size), Format(format), DeleteMemory(true), sizeChanged(false)
 		{
 			initData();
+			if (DefaultTexture)
+			{
+				int i, j;
+
+				for (j = 0; j < (int)size.Height; j++)
+				{
+					for (i = 0; i < (int)size.Width; i++) 
+					{
+						int x = i / 32, y = j / 32;
+						setPixel(i, j, ((x + y) & 1) ? 0xffffffff: 0xff000000, false);
+					}
+				}
+			}
 		}
 
-		void Texture::reset(ECOLOR_FORMAT format, const core::dimension2d<u32>& size, void* data)
+		void Texture::reset(ECOLOR_FORMAT format, const core::dimension2d<u32>& size, int lpitch, void* data)
 		{
 			Format = format;
 			Size = size;
 			Data = (u8*)data;
+			Pitch = lpitch;
 		}
 
 		//! Constructor from raw data
 		Texture::Texture(ECOLOR_FORMAT format, const core::dimension2d<u32>& size, void* data,
 			bool ownForeignMemory, bool deleteForeignMemory)
-			: Data(0), Size(size), Format(format), DeleteMemory(deleteForeignMemory)
+			: Data(0), Size(size), Format(format), DeleteMemory(deleteForeignMemory), sizeChanged(false)
 		{
 			if (ownForeignMemory)
 			{
@@ -61,7 +74,6 @@ namespace vg
 				Data = new u8[Size.Height * Pitch];
 			}
 		}
-
 
 		//! destructor
 		Texture::~Texture()
@@ -266,12 +278,14 @@ namespace vg
 		//! Returns a pixel by ,(u,v)--u,v[0,1]
 		glm::vec4 Texture::getColorf(const glm::vec2 coord) const
 		{
-			u32 x = (u32)(coord.x*(f32)Size.Width);
-			u32 y = (u32)(coord.y*(f32)Size.Height);
-
-			if (x >= Size.Width || y >= Size.Height)
-				return glm::vec4(0);
-
+			int x, y;
+			float u, v;
+			u = coord.x* Size.Width;
+			v = coord.y* Size.Height;
+			x = (int)(u + 0.5f);
+			y = (int)(v + 0.5f);
+			x = core::clamp(x, 0,(int) Size.Width - 1);
+			y = core::clamp(y, 0, (int)Size.Height - 1);
 
 			switch (Format)
 			{
@@ -291,7 +305,7 @@ namespace vg
 				break;
 #endif
 			}
-			return glm::vec4(0);
+			return glm::vec4(1,0,0,1);
 		}
 
 		//! returns the color format

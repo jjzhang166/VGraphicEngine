@@ -13,18 +13,18 @@
 #include <math.h>
 
 
-#if defined (_CV_SOLARIS_PLATFORM)||defined(__BORLANDC__)||defined(__BCPULUPSLUS__)||defined(_WIN32_WCE)
-#define sqrtf(X) (irr::f32)sqrt((irr::f64)(X))
-#define sinf(X) (irr::f32)sin((irr::f64)(X))
-#define cosf(X) (irr::f32)cos((irr::f64)(X))
-#define asinf(X) (irr::f32)asin((irr::f64)(X))
-#define atan2f(X,Y) (irr::f32)atan2((irr::f64)(X),(irr::f64)(Y))
-#define ceilf(X) (irr::f32)ceil((irr::f64)(X))
-#define floorf(X) (irr::f32)floor((irr::f64)(X))
-#define powf(X,Y) (irr::f32)pow((irr::f64)(X),(irr::f64)(Y))
-#define fmodf(X,Y) (irr::f32)fmod((irr::f64)(X),(irr::f64)(Y))
-#define fabsf(X) (irr::f32)fabs((irr::f64)(X))
-#define logf(X) (irr::f32)log((irr::f64)(X))
+#if defined (_VG_SOLARIS_PLATFORM)||defined(__BORLANDC__)||defined(__BCPULUPSLUS__)||defined(_WIN32_WCE)
+#define sqrtf(X) (vg::f32)sqrt((vg::f64)(X))
+#define sinf(X) (vg::f32)sin((vg::f64)(X))
+#define cosf(X) (vg::f32)cos((vg::f64)(X))
+#define asinf(X) (vg::f32)asin((vg::f64)(X))
+#define atan2f(X,Y) (vg::f32)atan2((vg::f64)(X),(vg::f64)(Y))
+#define ceilf(X) (vg::f32)ceil((vg::f64)(X))
+#define floorf(X) (vg::f32)floor((vg::f64)(X))
+#define powf(X,Y) (vg::f32)pow((vg::f64)(X),(irr::f64)(Y))
+#define fmodf(X,Y) (vg::f32)fmod((vg::f64)(X),(irr::f64)(Y))
+#define fabsf(X) (vg::f32)fabs((vg::f64)(X))
+#define logf(X) (vg::f32)log((vg::f64)(X))
 #endif
 #ifndef FLT_MAX
 //max value of positive integer

@@ -27,6 +27,9 @@
 #include "position2d.h"
 #include "dimension2d.h"
 #include "rect.h"
+#include "vgMulArray.h"
+#include "vgArray.h"
+#include "vgList.h"
 
 
 //vg::fw
@@ -44,15 +47,23 @@
 #include "Texture.h"
 #include "SColor.h"
 #include "TextureHelper.h"
-#include "VRManager.h"
+#include "VRenderer.h"
+#include "VRTexturesManager.h"
+#include "VRProgramManager.h"
+#include "VRBufferManager.h"
+#include "Texture.h"
 
 //vg::sl
+#include "ConfigForSL.h"
+#include "SDepthTestNode.h"
+#include "TransferDatas.h"
+#include "IDataHolderBase.h"
+#include "ISLShaderBase.h"
+#include "SLEnumPrimitiveType.h"
 
 //vg::io
 #include "IException.h"
 #include "IStringException.h"
-
-
 
 namespace vg
 {

@@ -52,6 +52,10 @@ namespace vg
 		}
 
 
+		void* CNullDriver::getBackBuffer() 
+		{
+			return nullptr;
+		}
 		//! Only used by the internal engine. Used to notify the driver that
 		//! the window was resized.
 		void CNullDriver::OnResize(const core::dimension2d<u32>& size)
@@ -85,6 +89,11 @@ namespace vg
 		const core::dimension2d<u32>& CNullDriver::getCurrentRenderTargetSize() const
 		{
 			return ScreenSize;
+		}
+
+		const int CNullDriver::getCurrentRenderTargetLpitch() const
+		{
+			return 0;
 		}
 
 	

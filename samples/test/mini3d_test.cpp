@@ -937,7 +937,8 @@ int main(void)
 		if (screen_keys[VK_LEFT]) alpha += 0.01f;
 		if (screen_keys[VK_RIGHT]) alpha -= 0.01f;
 
-		if (screen_keys[VK_SPACE]) {
+		if (screen_keys[VK_SPACE])
+		{
 			if (kbhit == 0) {
 				kbhit = 1;
 				if (++indicator >= 3) indicator = 0;

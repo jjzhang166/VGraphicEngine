@@ -48,7 +48,9 @@ namespace vg
 
 			/**! Get the back surface to do something.
 			*/
-			virtual void* getBackSurface();
+			virtual void* getBackSurface()override;
+
+			virtual void* getBackBuffer() override;
 
 			//! Only used by the engine internally.
 			/** Used to notify the driver that the window was resized. */
@@ -57,6 +59,11 @@ namespace vg
 			//*******************part two********************
 			const core::dimension2d<u32>& getCurrentRenderTargetSize() const;
 
+			const int getCurrentRenderTargetLpitch() const override
+			{
+				return back_lpitch;
+			}
+
 			void reset();
 
 			void setContent(const core::dimension2d<u32>& screenSize, 
@@ -64,8 +71,9 @@ namespace vg
 
 		private:
 			//Init²¿·Ö
-			LPDIRECTDRAWSURFACE7 DDraw_Create_Surface(int width, int height, int = 0, u16 color_key_value = 0);
-			int Load_Palette_From_File(char *filename, LPPALETTEENTRY palette);
+			LPDIRECTDRAWSURFACE7 CHalfSoftWareDriver::DDraw_Create_Surface(int width,
+				int height,	int mem_flags = 0,USHORT color_key_value = 0);	
+			s32 Load_Palette_From_File(c8 *filename, LPPALETTEENTRY palette);
 			int DDraw_Fill_Surface(LPDIRECTDRAWSURFACE7 lpdds, u32 color, RECT *client = NULL);
 			LPDIRECTDRAWCLIPPER DDraw_Attach_Clipper(LPDIRECTDRAWSURFACE7 lpdds, int num_rects, LPRECT clip_list);
 			//end Init

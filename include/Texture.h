@@ -32,9 +32,9 @@ namespace vg
 				void* data, bool ownForeignMemory = true, bool deleteMemory = true);
 
 			//! constructor for empty image
-			Texture(ECOLOR_FORMAT format, const core::dimension2d<u32>& size);
+			Texture(ECOLOR_FORMAT format, const core::dimension2d<u32>& size,bool DefaultTexture = false);
 
-			void reset(ECOLOR_FORMAT format, const core::dimension2d<u32>& size, void* data);
+			void reset(ECOLOR_FORMAT format, const core::dimension2d<u32>& size,int lpitch, void* data);
 
 			//! destructor
 			virtual ~Texture();
@@ -59,6 +59,18 @@ namespace vg
 
 			//! Returns image data size in bytes
 			virtual u32 getImageDataSizeInBytes() const ;
+
+			// in pixel
+			virtual u32 getWidth()
+			{
+				return Size.Width;
+			}
+
+			// in pixel
+			virtual u32 getHeight()
+			{
+				return Size.Height;
+			}
 
 			//! Returns image data size in pixels
 			virtual u32 getImageDataSizeInPixels() const ;
@@ -164,6 +176,15 @@ namespace vg
 				}
 			}
 
+			virtual void setSizeChanged(bool value = false)
+			{
+				sizeChanged = value;
+			}
+
+			virtual bool getSizeChanged()
+			{
+				return sizeChanged;
+			}
 		private:
 
 			//! assumes format and size has been set and creates the rest
@@ -178,6 +199,7 @@ namespace vg
 			ECOLOR_FORMAT Format;
 
 			bool DeleteMemory;
+			bool sizeChanged;
 		};
 
 	} // end namespace vr

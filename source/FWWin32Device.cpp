@@ -714,7 +714,11 @@ namespace vg
 		bool FWWin32Device::clear(vr::SColor color, core::rect<s32>* sourceRect)
 		{
 			VideoDriver->clear(color, sourceRect);
-			DefaultRenderTarget->reset(FWVideo.ColorFormat, FWVideo.ScreenSize, VideoDriver->getBackSurface());
+			DefaultRenderTarget->reset(
+				FWVideo.ColorFormat,
+				FWVideo.ScreenSize,
+				VideoDriver->getCurrentRenderTargetLpitch(),
+				VideoDriver->getBackBuffer());
 			return true;
 		}
 
@@ -766,6 +770,8 @@ namespace vg
 				getVideoDriver()->OnResize(vg::core::dimension2du((u32)r.right, (u32)r.bottom));
 				getWin32CursorControl()->OnResize(getVideoDriver()->getScreenSize());
 				FWVideo.ScreenSize = getVideoDriver()->getScreenSize();
+				DefaultRenderTarget->setSizeChanged(true);
+
 			}
 
 			Resized = false;
@@ -1125,6 +1131,7 @@ namespace vg
 		void FWWin32Device::OnResized()
 		{
 			Resized = true;
+
 		}
 
 

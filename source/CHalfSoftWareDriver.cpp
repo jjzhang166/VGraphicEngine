@@ -61,11 +61,14 @@ namespace vg
 			CNullDriver::clear( color, sourceRect);
 			//	RECT rect;
 			SceneSourceRect = sourceRect;
+
 			// clear the drawing surface
-			DDraw_Fill_Surface(lpddsback, color.color);//?
+			DDraw_Fill_Surface(lpddsback, color.color);
 
 			// lock the back buffer
 			DDraw_Lock_Back_Surface();
+
+
 			//Graphic2D->InitCGraphic2D(ScreenSize, back_buffer, back_lpitch);
 			//之后绘制内容都会知道back_buffer上
 			return true;
@@ -334,7 +337,8 @@ namespace vg
 
 #pragma region InitDriver
 
-		// this function creates an offscreen plain surface
+
+
 		LPDIRECTDRAWSURFACE7 CHalfSoftWareDriver::DDraw_Create_Surface(int width,
 			int height,
 			int mem_flags,
@@ -384,7 +388,7 @@ namespace vg
 							 // clear out the structure and set the size field 
 			DDRAW_INIT_STRUCT(ddbltfx);
 
-			// set the dwfillcolor field to the desired color
+			// set the dwfillcolor field to the desired color,dwFillPixel
 			ddbltfx.dwFillPixel = color;
 
 			// ready to blt to surface
@@ -515,6 +519,10 @@ namespace vg
 			return lpddsback;
 		}
 
+		void* CHalfSoftWareDriver::getBackBuffer()
+		{
+			return back_buffer;
+		}
 
 		void CHalfSoftWareDriver::reset()
 		{
@@ -530,7 +538,7 @@ namespace vg
 			CNullDriver::OnResize(size);
 
 			ScreenSize = size;
-
+			
 			reset();
 
 		}
@@ -576,7 +584,6 @@ namespace vg
 				// blit the entire back surface to the primary
 				if (FAILED(lpddsprimary->Blt(&dest_rect, lpddsback, NULL, DDBLT_WAIT, NULL)))//dest_rect
 					return(0);
-
 			} // end if
 
 			  // return success

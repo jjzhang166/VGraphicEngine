@@ -31,6 +31,8 @@ namespace vg
 		enum { PRECISION_OF_SQORT = 6 };
 	}
 
+
+#define RETURN_WITH_REASON(str,ret) {printf("%s",str);return ret;}
 #if defined(_CV_WCHAR_FILESYSTEM)
 	typedef wchar_t fschar_t;
 #else
