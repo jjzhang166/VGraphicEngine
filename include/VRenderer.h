@@ -46,6 +46,10 @@ namespace vg
 			{
 				ProgramMgr.bindDepthBuffer(BufferMgr.getDepthBuffer());
 			}
+			~VRenderer()
+			{
+
+			}
 
 #pragma region Program
 

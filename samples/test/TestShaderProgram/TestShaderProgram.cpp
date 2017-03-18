@@ -185,6 +185,7 @@ int main()
 		device->swapBuffers();
 	}
 
+	delete vrender;
 	device->drop();
 	return 0;
 }
