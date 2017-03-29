@@ -25,10 +25,10 @@ namespace vg
 				// set insert(sort) function.
 				//DepthBuffer->setSortInsertFunction(SortInsertFuncForSDepthTestNode);
 			}
-			~VRBufferManager()
+			/*~VRBufferManager()
 			{
 				delete DepthBuffer;
-			}
+			}*/
 			virtual int bindBuffer(E_BUFFER_TYPE ebt, int size, void** data,int interinal = 0,bool ownForeign = false)
 			{
 				IBufferBase* newBuffer = nullptr;
